@@ -1,4 +1,4 @@
-name: llt_sys
+name: weller
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -38,6 +38,17 @@ dependencies:
   intl: ^0.19.0
   # For HTTP requests
   http: ^1.2.0
+  # For file picking
+  file_picker: ^8.0.0
+  provider: ^6.0.0
+  # For local notifications and alarms
+  flutter_local_notifications: ^17.0.0
+  # For handling time zones
+  timezone: ^0.9.0
+  # For SVG support
+  flutter_svg: ^2.0.0
+  # For data persistence
+  shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +60,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  # For generating app icons
+  flutter_launcher_icons: ^0.14.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -62,9 +75,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/cat_icon.svg
+    - assets/images/wish_icon.svg
+    - assets/images/pending_icon.svg
+    - assets/images/inventory_icon.svg
+    - assets/images/apk.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -84,6 +100,12 @@ flutter:
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
+
+# flutter_launcher_icons configuration
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/apk.png"
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
